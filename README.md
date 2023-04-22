@@ -11,16 +11,16 @@ _注:此项目备份已丢失_
 当运行代码时，会先使用方法 **getWord** 拆分字符串，然后获取并变量全局表的所有变量名称，如果相等就获取对应的Value变量，然后执行 Value 变量的run方法。  
 
 ***Main.java 部分代码***
-
+```java
     this.Global.put("echo",new Runnable(){  
         public void run() {
             System.out.println(this.args);
         }  
     })  
     Ca.loadString("echo \\"Hello World !\\"")
-
-***Value.java 代码***
 ```
+***Value.java 代码***
+```java
 import java.lang.reflect.Constructor;
 public class Value extends Object{
     private Class c;
